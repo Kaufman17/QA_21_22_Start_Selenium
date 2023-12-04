@@ -24,14 +24,18 @@ public class HomeWorks {
         //by tag name
         WebElement e1 = wd.findElement(By.tagName("body"));
         WebElement elBody = wd.findElement(By.cssSelector("body"));
+        WebElement xelBody = wd.findElement(By.xpath("//body"));
 
         WebElement e2 = wd.findElement(By.tagName("div"));
         WebElement elDiv = wd.findElement(By.cssSelector("div"));
+        WebElement xelDiv = wd.findElement(By.xpath("//div"));
 
         WebElement e3 = wd.findElement(By.tagName("h1"));
         WebElement elH1 = wd.findElement(By.cssSelector("h1"));
+        WebElement xelH1 = wd.findElement(By.xpath("//h1"));
 
         List<WebElement> list = wd.findElements(By.tagName("a"));
+        List<WebElement> xlist = wd.findElements(By.xpath("//a"));
 
         WebElement e4 = wd.findElement(By.tagName("button"));
         WebElement elButton = wd.findElement(By.cssSelector("button"));
@@ -40,6 +44,7 @@ public class HomeWorks {
 
         WebElement e6 = wd.findElement(By.tagName("form"));
         WebElement elForm = wd.findElement(By.cssSelector("form"));
+        WebElement xelForm = wd.findElement(By.xpath("//form"));
 
 
         //by class
@@ -50,12 +55,15 @@ public class HomeWorks {
 
         WebElement navBar = wd.findElement(By.className("navbar-component_nav__1X_4m"));
         WebElement navBar1 = wd.findElement(By.cssSelector(".navbar-component_nav__1X_4m"));
+        WebElement xnavBar1 = wd.findElement(By.xpath("//*[@class='navbar-component_nav__1X_4m']"));
 
         WebElement active = wd.findElement(By.className("active"));
         WebElement active1 = wd.findElement(By.cssSelector(".active"));
+        WebElement xactive1 = wd.findElement(By.xpath("//*[@class='active']"));
 
         WebElement login = wd.findElement(By.className("login_login__3EHKB"));
         WebElement login1 = wd.findElement(By.cssSelector(".login_login__3EHKB"));
+        WebElement xlogin1 = wd.findElement(By.xpath("//*[@class='login_login__3EHKB']"));
 
 
         //by id
@@ -66,11 +74,17 @@ public class HomeWorks {
 
         //by attribute
 
-
         WebElement hrefHome = wd.findElement(By.cssSelector("[href='/home']"));
+        WebElement xhrefHome = wd.findElement(By.xpath("//*[@href='/home']"));
+
         WebElement hrefAbout = wd.findElement(By.cssSelector("[href='/about']"));
+        WebElement xhrefAbout = wd.findElement(By.xpath("//*[@href='/about']"));
+
         WebElement hrefLogin = wd.findElement(By.cssSelector("[href='/login']"));
+        WebElement xhrefLogin = wd.findElement(By.xpath("//*[@href='/login']"));
+
         WebElement ariaCurrent = wd.findElement(By.cssSelector("[aria-current='page']"));
+        WebElement xariaCurrent = wd.findElement(By.xpath("//*[@aria-current='page']"));
 
         WebElement inputNameEmail = wd.findElement(By.cssSelector("[name='email']"));
         WebElement inputNamePas = wd.findElement(By.cssSelector("[name='password']"));
@@ -96,7 +110,6 @@ public class HomeWorks {
         WebElement xEl21 = wd.findElement(By.xpath("//input [contains(@placeholder, 'ma')]"));
 
     }
-
 
     @AfterClass
     public void closeWd() {
